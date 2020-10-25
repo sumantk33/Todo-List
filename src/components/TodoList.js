@@ -2,18 +2,19 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Todo from "./Todo";
 import AddTodo from "./AddTodo";
-import { ListGroup, Button } from "react-bootstrap";
+import { ListGroup } from "react-bootstrap";
 
 const TodoList = (props) => {
   const [todos, setTodos] = useState([]);
 
+  const getTodos = async () => {
+    const { data } = await axios.get("/todos");
+    setTodos(data);
+  };
+
   useEffect(() => {
-    const getTodos = async () => {
-      const { data } = await axios.get("/todos");
-      setTodos(data);
-    };
     getTodos();
-  }, [todos]);
+  }, []);
 
   return (
     <div>

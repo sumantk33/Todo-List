@@ -7,14 +7,14 @@
       "id": 1
     },
     {
-      "message": "Todo-List updated",
+      "message": "Add some todos",
       "urgent": "false",
       "date": "25-10-2020",
       "id": 2
     },
     {
-      "message": "Automatic fetching when data added",
-      "urgent": "true",
+      "message": "Checking if the program is functioning",
+      "urgent": "false",
       "date": "25-10-2020",
       "id": 3
     }

@@ -4,15 +4,14 @@ import { ListGroup, Row, Col } from "react-bootstrap";
 
 const Todo = ({ todo }) => {
   const deleteLog = async () => {
-    const res = await axios.delete(`/todos/${todo.id}`);
-    console.log(res);
+    await axios.delete(`/todos/${todo.id}`);
   };
 
   return (
     <ListGroup.Item size='sm'>
       <Row>
         <Col md={4}>
-          <h6 className={todo.urgent == "true" ? "text-danger" : "text-info"}>
+          <h6 className={todo.urgent === "true" ? "text-danger" : "text-info"}>
             {todo.message}
           </h6>
           TD #{todo.id}

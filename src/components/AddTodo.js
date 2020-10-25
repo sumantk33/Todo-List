@@ -1,22 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-import {
-  Button,
-  Form,
-  FormGroup,
-  FormControl,
-  Modal,
-  Row,
-  Col,
-  InputGroup,
-  Dropdown,
-  DropdownButton,
-} from "react-bootstrap";
+import { Button, FormControl, InputGroup } from "react-bootstrap";
 
 const AddTodo = () => {
   const [message, setMessage] = useState("");
   const [urgent, setUrgent] = useState("");
-  const [date, setDate] = useState("");
 
   const getDate = () => {
     const today = new Date();
@@ -34,15 +22,13 @@ const AddTodo = () => {
         "Content-Type": "application/json",
       };
 
-      console.log(urgent);
-
       const data = {
         message,
         urgent,
         date: getDate(),
       };
 
-      const res = await axios.post("/todos", data, config);
+      await axios.post("/todos", data, config);
 
       setMessage("");
     }
