@@ -2,9 +2,10 @@ import axios from "axios";
 import React from "react";
 import { ListGroup, Row, Col } from "react-bootstrap";
 
-const Todo = ({ todo }) => {
+const Todo = ({ todo, setFetchAgain }) => {
   const deleteLog = async () => {
     await axios.delete(`/todos/${todo.id}`);
+    setFetchAgain(true);
   };
 
   return (

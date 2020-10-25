@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Button, FormControl, InputGroup } from "react-bootstrap";
 
-const AddTodo = () => {
+const AddTodo = ({ setFetchAgain }) => {
   const [message, setMessage] = useState("");
   const [urgent, setUrgent] = useState("");
 
@@ -31,6 +31,9 @@ const AddTodo = () => {
       await axios.post("/todos", data, config);
 
       setMessage("");
+      setUrgent("");
+
+      setFetchAgain(true);
     }
   };
 
@@ -43,7 +46,11 @@ const AddTodo = () => {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       />
-      <select name='todo' onChange={(e) => setUrgent(e.target.value)}>
+      <select
+        name='todo'
+        value={urgent}
+        onChange={(e) => setUrgent(e.target.value)}
+      >
         <option value=''>Urgent?</option>
         <option value='true'>Yes</option>
         <option value='false'>No</option>

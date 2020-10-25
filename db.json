@@ -17,6 +17,12 @@
       "urgent": "false",
       "date": "25-10-2020",
       "id": 3
+    },
+    {
+      "message": "Add automatic update feature",
+      "urgent": "true",
+      "date": "25-10-2020",
+      "id": 4
     }
   ]
 }
