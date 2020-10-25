@@ -1,28 +1,10 @@
 {
   "todos": [
     {
-      "id": 1,
-      "message": "Attend classes",
-      "date": "01-02-2020",
-      "urgent": true
-    },
-    {
-      "id": 2,
-      "message": "Updated Todolist",
-      "date": "01-02-2020",
-      "urgent": false
-    },
-    {
-      "id": 3,
-      "message": "Updated Todolist",
-      "date": "01-02-2020",
-      "urgent": false
-    },
-    {
-      "id": 4,
-      "message": "Updated Todolist",
-      "date": "01-02-2020",
-      "urgent": false
+      "message": "Build Todo List",
+      "urgent": "true",
+      "date": "25-10-2020",
+      "id": 1
     }
   ]
 }

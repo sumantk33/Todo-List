@@ -12,7 +12,7 @@ const Todo = ({ todo }) => {
     <ListGroup.Item size='sm'>
       <Row>
         <Col md={4}>
-          <h6 className={todo.urgent ? "text-danger" : "text-info"}>
+          <h6 className={todo.urgent == "true" ? "text-danger" : "text-info"}>
             {todo.message}
           </h6>
           TD #{todo.id}

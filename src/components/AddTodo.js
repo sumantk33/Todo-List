@@ -30,13 +30,11 @@ const AddTodo = () => {
     if (urgent === "") {
       alert("Urgency not selected");
     } else {
-      const urgentData = urgent === "true" ? true : false;
-
-      setUrgent(urgentData);
-
       const config = {
         "Content-Type": "application/json",
       };
+
+      console.log(urgent);
 
       const data = {
         message,

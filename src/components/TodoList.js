@@ -21,11 +21,15 @@ const TodoList = (props) => {
         Todo-List
       </h1>
       <AddTodo />
-      <ListGroup>
-        {todos.map((todo) => (
-          <Todo todo={todo} key={todo.id} />
-        ))}
-      </ListGroup>
+      {todos.length === 0 ? (
+        <h3 className='text-center'>No todos.....</h3>
+      ) : (
+        <ListGroup>
+          {todos.map((todo) => (
+            <Todo todo={todo} key={todo.id} />
+          ))}
+        </ListGroup>
+      )}
     </div>
   );
 };
