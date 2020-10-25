@@ -44,7 +44,7 @@ const AddTodo = () => {
 
       const res = await axios.post("/todos", data, config);
 
-      console.log(res);
+      setMessage("");
     }
   };
 
@@ -54,6 +54,7 @@ const AddTodo = () => {
         placeholder='Enter Todo'
         aria-label="Recipient's username"
         aria-describedby='basic-addon2'
+        value={message}
         onChange={(e) => setMessage(e.target.value)}
       />
       <select name='todo' onChange={(e) => setUrgent(e.target.value)}>

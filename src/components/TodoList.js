@@ -13,7 +13,7 @@ const TodoList = (props) => {
       setTodos(data);
     };
     getTodos();
-  }, []);
+  }, [todos]);
 
   return (
     <div>

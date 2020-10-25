@@ -5,6 +5,18 @@
       "urgent": "true",
       "date": "25-10-2020",
       "id": 1
+    },
+    {
+      "message": "Todo-List updated",
+      "urgent": "false",
+      "date": "25-10-2020",
+      "id": 2
+    },
+    {
+      "message": "Automatic fetching when data added",
+      "urgent": "true",
+      "date": "25-10-2020",
+      "id": 3
     }
   ]
 }
