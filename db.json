@@ -1,0 +1,19 @@
+{
+    "todos": [
+        {
+            "id": 1,
+            "message": "Attend classes",
+            "date": "01-02-2020"
+        },
+        {
+            "id": 2,
+            "message": "Code To-do list",
+            "date": "02-03-2020"
+        },
+        {
+            "id": 3,
+            "message": "Add functionalities",
+            "date": "03-04-2020"
+        }
+    ]
+}
