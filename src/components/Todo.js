@@ -9,7 +9,7 @@ const Todo = ({ todo }) => {
   };
 
   return (
-    <ListGroup.Item>
+    <ListGroup.Item size='sm'>
       <Row>
         <Col md={4}>
           <h6 className={todo.urgent ? "text-danger" : "text-info"}>
