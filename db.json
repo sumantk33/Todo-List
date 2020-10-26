@@ -1,28 +1,22 @@
 {
   "todos": [
     {
-      "message": "Build Todo List",
+      "message": "Build Todo",
       "urgent": "true",
-      "date": "25-10-2020",
+      "date": "26-10-2020",
       "id": 1
     },
     {
-      "message": "Add some todos",
+      "message": "Arrange Items",
       "urgent": "false",
-      "date": "25-10-2020",
+      "date": "26-10-2020",
       "id": 2
     },
     {
-      "message": "Checking if the program is functioning",
-      "urgent": "false",
-      "date": "25-10-2020",
-      "id": 3
-    },
-    {
-      "message": "Add automatic update feature",
+      "message": "Watch El clasico",
       "urgent": "true",
-      "date": "25-10-2020",
-      "id": 4
+      "date": "26-10-2020",
+      "id": 3
     }
   ]
 }

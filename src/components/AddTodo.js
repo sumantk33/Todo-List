@@ -38,7 +38,7 @@ const AddTodo = ({ setFetchAgain }) => {
   };
 
   return (
-    <InputGroup className='mb-3'>
+    <InputGroup>
       <FormControl
         placeholder='Enter Todo'
         aria-label="Recipient's username"

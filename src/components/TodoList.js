@@ -24,6 +24,7 @@ const TodoList = (props) => {
         Todo-List
       </h1>
       <AddTodo setFetchAgain={setFetchAgain} />
+      <br />
       {todos.length === 0 ? (
         <h3 className='text-center'>No todos.....</h3>
       ) : (

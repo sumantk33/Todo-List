@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Container } from "react-bootstrap";
 import TodoList from "./components/TodoList";
 
@@ -11,6 +10,6 @@ const App = () => {
       </Container>
     </div>
   );
-}
+};
 
 export default App;

@@ -1,36 +1,38 @@
-import axios from "axios";
 import React from "react";
+import axios from "axios";
 import { ListGroup, Row, Col } from "react-bootstrap";
 
-const Todo = ({ todo, setFetchAgain }) => {
+const Todo = ({ todo: { message, urgent, id, date }, setFetchAgain }) => {
   const deleteLog = async () => {
-    await axios.delete(`/todos/${todo.id}`);
+    await axios.delete(`/todos/${id}`);
     setFetchAgain(true);
   };
 
   return (
-    <ListGroup.Item size='sm'>
-      <Row>
-        <Col md={4}>
-          <h6 className={todo.urgent === "true" ? "text-danger" : "text-info"}>
-            {todo.message}
-          </h6>
-          TD #{todo.id}
-          <span className='text-muted'> Created on: </span>
-          {todo.date}
-        </Col>
-        <Col md={8}>
-          <a
-            href='#!'
-            onClick={deleteLog}
-            className='secondary-content'
-            style={{ float: "right" }}
-          >
-            <i className='material-icons grey-text'>delete</i>
-          </a>
-        </Col>
-      </Row>
-    </ListGroup.Item>
+    <div>
+      <ListGroup.Item size='sm'>
+        <Row>
+          <Col md={10}>
+            <h6 className={urgent === "true" ? "text-danger" : "text-info"}>
+              {message}
+            </h6>
+            TD #{id}
+            <span className='text-muted'> Created on: </span>
+            {date}
+          </Col>
+          <Col md={2}>
+            <a
+              href='#!'
+              onClick={deleteLog}
+              className='secondary-content'
+              style={{ float: "right" }}
+            >
+              <i className='material-icons grey-text'>delete</i>
+            </a>
+          </Col>
+        </Row>
+      </ListGroup.Item>
+    </div>
   );
 };
 
