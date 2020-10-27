@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { ListGroup, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Todo = ({ todo: { message, urgent, id, date }, setFetchAgain }) => {
   const deleteLog = async () => {
@@ -29,6 +30,14 @@ const Todo = ({ todo: { message, urgent, id, date }, setFetchAgain }) => {
             >
               <i className='material-icons grey-text'>delete</i>
             </a>
+
+            <Link
+              to={`/todos/${id}`}
+              className='secondary-content'
+              style={{ float: "right" }}
+            >
+              <i className='material-icons grey-text'>create</i>
+            </Link>
           </Col>
         </Row>
       </ListGroup.Item>
