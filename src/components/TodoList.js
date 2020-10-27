@@ -4,7 +4,7 @@ import Todo from "./Todo";
 import AddTodo from "./AddTodo";
 import { ListGroup } from "react-bootstrap";
 
-const TodoList = (props) => {
+const TodoList = () => {
   const [todos, setTodos] = useState([]);
   const [fetchAgain, setFetchAgain] = useState(false);
 

@@ -9,7 +9,7 @@ const AddTodo = ({ setFetchAgain }) => {
   const getDate = () => {
     const today = new Date();
     const dd = today.getDate();
-    const mm = today.getMonth() + 1;
+    const mm = today.getMonth() + 1; // January is 0
     const yyyy = today.getFullYear();
     return dd.toString() + "-" + mm.toString() + "-" + yyyy.toString();
   };
@@ -17,6 +17,8 @@ const AddTodo = ({ setFetchAgain }) => {
   const addHandler = async () => {
     if (urgent === "") {
       alert("Urgency not selected");
+    } else if (message === "") {
+      alert("Please enter a message");
     } else {
       const config = {
         "Content-Type": "application/json",
@@ -41,8 +43,6 @@ const AddTodo = ({ setFetchAgain }) => {
     <InputGroup>
       <FormControl
         placeholder='Enter Todo'
-        aria-label="Recipient's username"
-        aria-describedby='basic-addon2'
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       />
